@@ -5,7 +5,6 @@
 from __future__ import division
 import cv2
 import magic
-import random
 import numpy as np
 from scipy import ndimage
 
@@ -49,12 +48,20 @@ class SkinRegion(object):
             image[rectangle_slices].take([0], axis=2)
         )
 
+def get_type(path):
+
+    if 'from_file' in dir(magic):
+        return magic.from_file(path)
+    else:
+        m = magic.open(magic.MAGIC_NONE)
+        m.load()
+        return m.file(path)
 
 def analize(path):
     """Analizes a file, returning True if it contains pornography."""
 
     try:
-        type_ = magic.from_file(path)
+        type_ = get_type(path)
     except IOError:
         return False
 
@@ -63,7 +70,7 @@ def analize(path):
 
     type_ = type_.lower()
 
-    if "video" in type_:
+    if "video" in type_ or "mpeg" in type_:
         return analize_video(path)
 
     if "image" in type_:
