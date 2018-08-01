@@ -1,0 +1,5 @@
+termcolor>=1.1.0
+opencv-python>=3.0.0
+python-magic>=0.4.3
+scipy>=0.12
+numpy>=1.7

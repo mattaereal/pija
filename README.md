@@ -5,16 +5,17 @@ Pija is a proof of concept about how malware can easily detect and steal homemad
 
 This PoC only contains the detection bits of the concept, but can be further improved using different techniques such as biometrics and metadata analysis to find matches between suspicious pictures and victim's social network's photos.
 
-Ths was developed as part of a presentation we (@alcuadrado & @mattaereal) gave at [Ekoparty](www.ekoparty.org) 2013. You can watch it [here](http://vimeo.com/77523121) (spanish) and grab the slides from [here](http://www.ekoparty.org//archive/2013/charlas/slides.tar.gz) (mostly spanish).
+Ths was developed as part of a presentation we (@mattaereal & @alcuadrado) gave at [Ekoparty](www.ekoparty.org) 2013. You can watch it [here](http://vimeo.com/77523121) (spanish) and grab the slides from [here](http://www.ekoparty.org//archive/2013/charlas/slides.tar.gz) (mostly spanish).
 
 ## Dependencies
+To install them all you can use `pip2 install -r requirements.txt`
 
 * python 2.7
-* python-opencv 2
-* scipy 0.12
-* numpy 1.7
-* termcolor 1.1.0
-* python-magic 0.4.3
+* python-opencv
+* scipy
+* numpy
+* termcolor
+* python-magic
 
 ## Running it
 
